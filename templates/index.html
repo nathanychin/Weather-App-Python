@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ location }} - Weather Alerts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+            <h1>WEATHER ALERTS</h1>
+        </div>
+    </header>
+    <div class="center">
+        <div class="center-content">
+        {% for alert in alerts %}
+            <div>
+                <h2>{{ alert.headline }}</h2>
+                <p>{{ alert.areaDesc }}</p>
+                <p>Status: {{ alert.status }}</p>
+                <p>Message Type: {{ alert.messageType }}</p>
+                <p>Severity: {{ alert.severity }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

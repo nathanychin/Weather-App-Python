@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+div {
+    display: block;
+}
+
+.center {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: baseline;
+    z-index: 1;
+    background: linear-gradient(to right, #caddd9 0%, white 50%, #caddd9 100%);
+}
+
+.center-content {
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    padding-bottom: 50px;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0; /* Align the header to the top of the screen */
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center; /* Center the header-content horizontally */
+    align-items: center; /* Center the header-content vertically */
+}
+
+.header-content {
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 990px; /* Adjust the width as needed */
+    display: flex; /* Use flexbox for header-content */
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Align items vertically */
+}
+
+.logo {
+    width: 50px; /* Adjust the width as needed */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+    flex: 1; /* Allow the h1 to grow and take up remaining space */
+}
